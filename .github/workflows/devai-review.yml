@@ -30,7 +30,7 @@ jobs:
         uses: 'google-github-actions/auth@v2'
         with:
           credentials_json: '${{ secrets.GOOGLE_API_CREDENTIALS }}' 
-          project_id: genai-cicd
+          project_id: devai-demo
       - name: Test Coverage Review
         run: echo '## Test Coverage Review Results 🚀' >> $GITHUB_STEP_SUMMARY
       - run: echo "$(devai review testcoverage -c ${{ github.workspace }}/sample-app/src)" >> $GITHUB_STEP_SUMMARY
